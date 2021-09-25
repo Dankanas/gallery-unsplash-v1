@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.docz/
+.DS_Store
+coverage/
+_cacache/
+_logs/
+_locks/
+anonymous-cli-metrics.json

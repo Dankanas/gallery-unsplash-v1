@@ -1,0 +1,21 @@
+$color-dark: #151515;
+$color-light: #eee;
+$color-dark-grey: #242424;
+$color-primary: #118DBA;
+$color-grey: #ADADAD;
+$color-light-grey: #dddddd;
+$color-transparent: rgba(0, 0, 0, 0);
+
+$theme-colors: (
+  'dark': $color-dark,
+  'light': $color-light,
+  'dark-grey': $color-dark-grey,
+  'primary': $color-primary,
+  'grey': $color-grey,
+  'light-grey': $color-light-grey,
+  'transparent': $color-transparent
+);
+
+@function color($_key) {
+  @return map-get($theme-colors, $_key);
+}

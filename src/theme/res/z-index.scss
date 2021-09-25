@@ -1,0 +1,10 @@
+$z-index-map: (
+  'background': -1,
+  'base': 0,
+  'content': 1,
+  'modal': 10
+);
+
+@function z-index($_key) {
+  @return map-get($z-index-map, $_key);
+}

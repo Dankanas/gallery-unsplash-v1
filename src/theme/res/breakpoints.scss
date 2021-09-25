@@ -1,0 +1,22 @@
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-cinema: 1280px;
+
+@mixin if-tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin if-desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin if-cinema {
+  @media screen and (min-width: $breakpoint-cinema) {
+    @content;
+  }
+}
