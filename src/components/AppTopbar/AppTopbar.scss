@@ -1,5 +1,13 @@
 .app-topbar {
-    background-color: rgba($color: #242020, $alpha: 0.75);
+    background-color: rgba($color: #242020, $alpha: 0.95);
+    display: flex;
     height: 80px;
+    justify-content: space-between;
+    padding: 10px 0;
     width: 100%;
+
+    &_inner {
+        display: flex;
+    }
 }
+

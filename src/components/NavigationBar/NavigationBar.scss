@@ -1,0 +1,16 @@
+.navigation-bar {
+    color: color('light');
+    display: flex;
+    justify-content: end;
+    font-family: 'Roboto', sans-serif;
+
+    &_item {
+        align-items: center;
+        border-left: solid 1px rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
+        width: 75px;
+        height: 100%;
+    }
+}
+
