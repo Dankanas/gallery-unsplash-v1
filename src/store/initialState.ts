@@ -1,7 +1,8 @@
 import { ApplicationState } from './types/applicationState';
 
 const initialState: ApplicationState = {
-  lightMode: false
+  themeSwitch: 'green',
+  favoriteImagesArray: []
 };
 
 export default initialState;

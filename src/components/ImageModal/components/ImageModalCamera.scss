@@ -1,0 +1,34 @@
+.camera {
+  border-top: 1px solid darken(color('grey'), 50);
+  display: grid;
+  font-family: font-family('body');
+  grid-template-columns: 1.8fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  padding-top: 30px;
+  row-gap: 30px;
+  @include if-tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  @include if-cinema {
+    grid-template-columns: 1.8fr 2fr 1.2fr;
+    grid-template-rows: auto auto;
+  }
+
+  &__title {
+    color: color('grey');
+    font-size: 0.75rem;
+    &.lightMode {
+      color:color('dark-grey');
+    }
+  }
+
+  &__content {
+    color: color('light');
+    font-size: 0.75rem;
+    margin-top: spacing('xs');
+    &.lightMode {
+      color:color('dark');
+    }
+  }
+}

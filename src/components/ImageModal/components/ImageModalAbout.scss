@@ -1,0 +1,15 @@
+.about {
+  background-color: color('dark-grey');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  width: 100%;
+  @include if-desktop {
+    height: 100%;
+    width: 50%;
+  }
+  @include if-cinema {
+    padding: 50px;
+  }
+}

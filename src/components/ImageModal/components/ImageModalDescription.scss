@@ -1,0 +1,23 @@
+.description {
+  font-family: font-family('body');
+  margin-top: 30px;
+  min-height: 140px;
+  width: 100%;
+
+  &__title {
+    color: color('grey');
+    font-size: 0.75rem;
+    &.lightMode {
+      color: color('dark-grey');
+    }
+  }
+
+  &__content {
+    color: color('light');
+    font-size: 1.25rem;
+    margin-top: spacing('xs');
+    &.lightMode {
+      color: color('dark');
+    }
+  }
+}

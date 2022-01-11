@@ -15,6 +15,10 @@
     "at-rule-empty-line-before": null,
     "block-closing-brace-newline-before": null,
     "no-extra-semicolons": null,
-    "no-eol-whitespace": null
+    "no-eol-whitespace": null,
+    "rule-empty-line-before": null,
+    "block-closing-brace-empty-line-before": null,
+    "declaration-colon-space-after": null
+
   }
 }

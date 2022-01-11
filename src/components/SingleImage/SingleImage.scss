@@ -1,0 +1,23 @@
+.img {
+    height: 100%;
+    width: 100%;
+    background-color: color('dark');
+
+    &_image {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    &_heart {
+        height: 30px;
+        width: 30px;
+        background-color: color('primary');
+        position: relative;
+        bottom: 100%;
+        padding: 5px;
+    }
+}
+

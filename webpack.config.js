@@ -9,9 +9,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const IOconfig = {
   entry: path.resolve(__dirname, './src/index.tsx'),
   output: {
-    dir: path.resolve(__dirname, 'dist'),
+    dir: path.resolve(__dirname, '/dist/'),
     js: 'app.bundle.[hash].js',
-    css: 'styles.min.[hash].css',
+    css: 'styles.min.css',
     assets: 'assets/',
   },
   htmlTemplate: path.resolve(__dirname, 'src/index.html'),
@@ -24,10 +24,12 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: IOconfig.output.dir,
+    publicPath: "/build/",
     filename: IOconfig.output.js,
   },
   devServer: {
-    static: './dist',
+    open: true,
+    hot: true,
   },
   module: {
     rules: [
@@ -92,3 +94,4 @@ module.exports = {
   },
 
 };
+

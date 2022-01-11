@@ -6,6 +6,8 @@ import HeartfullIcon from './components/Heartfull.icon';
 import HeartIcon from './components/Heart.icon';
 import ImageIcon from './components/Image.Icon';
 import SearchIcon from './components/Search.Icon';
+import EyeIcon from './components/Eye.icon';
+import DownloadIcon from './components/Download.icon';
 
 const Icon : FC<IconProps> = ({name} : IconProps) => {
     const className = 'icon';
@@ -22,6 +24,13 @@ const Icon : FC<IconProps> = ({name} : IconProps) => {
         case 'search':
                 return (<div className = {className}><SearchIcon/></div>);
                 break;
+        case 'eye': 
+                return (<div className = {className}><EyeIcon/></div>);
+                break;
+        case 'download':
+              return (<div className = {className}><DownloadIcon/></div>);
+              break;
+            
         
     }
     

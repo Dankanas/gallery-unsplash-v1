@@ -1,0 +1,27 @@
+.data {
+  align-items: center;
+  display: grid;
+  font-family: font-family('body');
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 30px;
+
+  &_value {
+    color: color('light');
+    font-size: 1rem;
+    margin-left: 10px;
+    width: 20%;
+    &.lightMode {
+      color: color('dark');
+    }
+  }
+
+  &_icon {
+    width: 30px;
+  }
+
+  &__block {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+}

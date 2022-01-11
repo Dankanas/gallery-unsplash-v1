@@ -4,13 +4,26 @@
     justify-content: end;
     font-family: 'Roboto', sans-serif;
 
-    &_item {
+    &_box {
         align-items: center;
         border-left: solid 1px rgba(255, 255, 255, 0.5);
         display: flex;
         justify-content: center;
-        width: 75px;
         height: 100%;
+        width: 75px;
+    }
+
+    &_box:hover {
+        background-color: color('primary');
+    }
+    
+    &_icon {
+        width: 30px;
+        height: 50px;
+    }
+
+    &_icon:active {
+        width: 27px;
     }
 }
 

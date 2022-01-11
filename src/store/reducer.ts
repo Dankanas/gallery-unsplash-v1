@@ -4,8 +4,19 @@ import initialState from './initialState';
 
 const reducer = (state = initialState, action: Action): ApplicationState => {
   switch (action.type) {
-    case ActionTypes.ToggleLightMode: {
-      return {...state, lightMode: !state.lightMode};
+    case ActionTypes.ToggleFavoriteImage: {
+      const dummyObjectArray = state.favoriteImagesArray;
+      if ( dummyObjectArray.some(x => { return x.id === action.payload.id; })
+      ) {
+        const filteredDummyObjectArray = dummyObjectArray.filter(x => {
+          return x.id != action.payload.id;
+        });
+        return { ...state, favoriteImagesArray: [...filteredDummyObjectArray] };
+      } else {
+        dummyObjectArray.push(action.payload);
+        console.log(dummyObjectArray);
+        return { ...state, favoriteImagesArray: [...dummyObjectArray] };
+      }
     }
     default: {
       return state;

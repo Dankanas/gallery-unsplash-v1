@@ -1,12 +1,24 @@
-export interface ToggleLightMode {
-  type: ActionTypes.ToggleLightMode;
-  payload: null;
+import { ToggleFavoriteImage } from "../action";
+import { FavoriteImagesType } from "./applicationState";
+
+import { ThemeSwitch } from "./applicationState";
+
+
+export interface ToggleTheme {
+  type: ActionTypes.ToggleTheme;
+  payload: ThemeSwitch;
+}
+
+export interface ToggleFavoriteImage {
+  type: ActionTypes.ToggleFavoriteImage;
+  payload: FavoriteImagesType;
 }
 
 export enum ActionTypes {
-  ToggleLightMode = 'TOGGLE_LIGHT_MODE'
+  ToggleTheme = 'TOGGLE_THEME',
+  ToggleFavoriteImage = 'TOGGLE_FAVORITE_IMAGE'
 }
 
-export type Action = ToggleLightMode;
+export type Action = ToggleTheme | ToggleFavoriteImage;
 
 

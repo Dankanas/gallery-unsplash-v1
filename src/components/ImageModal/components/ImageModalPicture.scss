@@ -1,0 +1,21 @@
+.picture {
+  &__box {
+    background-color: color('dark');
+    height: 80%;
+    width: 100%;
+    &.lightMode {
+      background-color: color('light');
+    }
+    @include if-desktop {
+      height: 100%;
+      width: 50%;
+    }
+  }
+  &__img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+  }
+}
