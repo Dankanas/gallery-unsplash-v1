@@ -5,8 +5,8 @@ import classNames from "classnames";
 import Icon from "../Icon";
 import { classNamesObject } from "../../containers/ClassNamesObject";
 
-import { IconName } from "../../types/IconName";
 import "./NavigationBar.scss";
+import { NavigationBarProps } from "../../types/NavigationBarProps";
 
 const NavigationBar: FC<NavigationBarProps> = ({
   NavigationItems,
@@ -38,13 +38,3 @@ const NavigationBar: FC<NavigationBarProps> = ({
 };
 
 export default NavigationBar;
-
-interface NavigationBarProps {
-  NavigationItems: NavigationItem[];
-}
-
-interface NavigationItem {
-  name: IconName;
-  route: string;
-  action?: string;
-}
