@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Grid from '../components/Grid/Grid';
+import { clientId } from '../constants/keys';
 
 const ImageGridContainer: FunctionComponent = () => {
   const numberOfGridPhotos = 24;
@@ -13,7 +14,7 @@ const ImageGridContainer: FunctionComponent = () => {
   const getUnsplashData = async () => {
     const response = await axios.get('https://api.unsplash.com/photos', {
       params: {
-        client_id: 'IpFv3wfhiTwFG5YhrM6R4Q0LGb3On_OOdCvFMREhyrk',
+        client_id: clientId,
         per_page: numberOfGridPhotos,
       },
     });

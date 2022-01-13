@@ -1,15 +1,15 @@
-import React, { FunctionComponent } from 'react';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 
-import ImageModalCamera from './ImageModalCamera';
-import ImageModalData from './ImageModalData';
-import ImageModalDescription from './ImageModalDescription';
-import ImageModalHeader from './ImageModalHeader';
-import { classNamesObject } from '../../../containers/ClassNamesObject';
+import ImageModalCamera from "./ImageModalCamera";
+import ImageModalData from "./ImageModalData";
+import ImageModalDescription from "./ImageModalDescription";
+import ImageModalHeader from "./ImageModalHeader";
+import { classNamesObject } from "../../../containers/ClassNamesObject";
 
-import './ImageModalAbout.scss';
+import "./ImageModalAbout.scss";
 
-const ImageModalAbout: FunctionComponent<SingleModal> = ({
+const ImageModalAbout: FunctionComponent<SingleModalProps> = ({
   author,
   description,
   likes,
@@ -21,8 +21,8 @@ const ImageModalAbout: FunctionComponent<SingleModal> = ({
   dimensions,
   id,
   src,
-}: SingleModal) => {
-  const className = 'about';
+}: SingleModalProps) => {
+  const className = "about";
   const classNameAbout = classNames(className, classNamesObject());
 
   return (
@@ -44,7 +44,7 @@ const ImageModalAbout: FunctionComponent<SingleModal> = ({
   );
 };
 
-interface SingleModal {
+interface SingleModalProps {
   id: string;
   author: string;
   description: string;

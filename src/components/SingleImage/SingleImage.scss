@@ -1,43 +1,42 @@
 .img {
+  height: 100%;
+  width: 100%;
+  background-color: color("dark-grey-2");
+
+  &.light {
+    background-color: color("light-grey");
+  }
+
+  &_image {
+    display: block;
     height: 100%;
     width: 100%;
-    background-color: color('dark-grey-2');
+    object-fit: cover;
+    position: relative;
+
+    &:hover {
+      height: 102%;
+      width: 102%;
+      transition-duration: 200ms;
+    }
+  }
+
+  &_heart {
+    height: 30px;
+    width: 30px;
+    background-color: color("primary");
+    position: relative;
+    bottom: 100%;
+    padding: 5px;
+
+    &.blue {
+      background-color: color("blue");
+    }
 
     &.light {
-        background-color: color('light-grey');
+      background-color: color("light-grey");
+      border: 2px;
+      border-color: color("dark-blue");
     }
-
-    &_image {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        position: relative;
-
-        &:hover {
-            height: 102%;
-            width: 102%;
-            transition-duration: 200ms;
-        }
-    }
-
-    &_heart {
-        height: 30px;
-        width: 30px;
-        background-color: color('primary');
-        position: relative;
-        bottom: 100%;
-        padding: 5px;
-
-        &.blue {
-            background-color: color('blue');
-        }
-
-        &.light {
-            background-color: color('light-grey');
-            border: 2px;
-            border-color: color('dark-blue');
-        }
-    }
+  }
 }
-

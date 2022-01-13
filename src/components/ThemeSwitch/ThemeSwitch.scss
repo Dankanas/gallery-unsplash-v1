@@ -1,28 +1,25 @@
 .theme-switch {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 50px; //75
+  border-radius: 5px;
+
+  &:hover {
+    background-color: color("primary");
+    cursor: pointer;
+    &.blue {
+      background-color: color("blue");
+    }
+    &.light {
+      background-color: color("dark-blue");
+    }
+  }
+
+  &_icon {
+    width: 30px;
     height: 50px;
-    width: 50px; //75
-    border-radius: 5px;
-    
-    &:hover {
-        background-color: color('primary');
-        cursor: pointer;
-        &.blue {
-            background-color: color('blue');
-        }
-        &.light {
-            background-color: color('dark-blue');
-        }
-    }
-
-    &_icon {
-        width: 30px;
-        height: 50px;
-        border-radius: 20px;
-    }
+    border-radius: 20px;
+  }
 }
-
-
-

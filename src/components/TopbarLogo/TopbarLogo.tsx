@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import './TopbarLogo.scss';
+import "./TopbarLogo.scss";
 
-const TopbarLogo : FC = () => {
-    const className = 'topbar-logo';
-    return <div className={className}>Dnk.</div>
+const TopbarLogo: FC = () => {
+  const className = "topbar-logo";
+  return <div className={className}>Dnk.</div>;
 };
 
-export default TopbarLogo
+export default TopbarLogo;

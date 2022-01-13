@@ -1,13 +1,14 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import classNames from "classnames";
 
 import Icon from "../Icon";
+import { ApplicationState } from "../../store/types";
+import { classNamesObject } from "../../containers/ClassNamesObject";
 
 import "./SingleImage.scss";
-import { classNamesObject } from "../../containers/ClassNamesObject";
-import { useSelector } from "react-redux";
-import { ApplicationState } from "../../store/types";
+import { SingleImageProps } from "../../types/SingleImageProps";
 
 const SingleImage: FC<SingleImageProps> = ({
   src,
@@ -33,11 +34,5 @@ const SingleImage: FC<SingleImageProps> = ({
     </Link>
   );
 };
-
-export interface SingleImageProps {
-  src: string;
-  liked?: boolean;
-  id?: string;
-}
 
 export default SingleImage;

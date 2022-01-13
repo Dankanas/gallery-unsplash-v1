@@ -1,11 +1,8 @@
-import React, { FunctionComponent } from 'react';
-import { useSelector } from 'react-redux';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 
-//import { ApplicationState } from '@/store/types';
-
-import './ImageModalCamera.scss';
-import { classNamesObject } from '../../../containers/ClassNamesObject';
+import "./ImageModalCamera.scss";
+import { classNamesObject } from "../../../containers/ClassNamesObject";
 
 const ImageModalCamera: FunctionComponent<ModalCameraProps> = ({
   cameraMakes,
@@ -13,9 +10,12 @@ const ImageModalCamera: FunctionComponent<ModalCameraProps> = ({
   focalLength,
   dimensions,
 }: ModalCameraProps) => {
-  const className = 'camera';
+  const className = "camera";
   const classNameTitle = `${className}__title`;
-  const classNameContent = classNames(`${className}__content`, classNamesObject());
+  const classNameContent = classNames(
+    `${className}__content`,
+    classNamesObject()
+  );
   return (
     <div className={`${className}`}>
       <div className={`${className}__block`}>

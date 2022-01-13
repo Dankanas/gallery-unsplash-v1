@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { IconColorProps } from "./Heart.icon";
+
+import { IconColorProps } from "../../../types/IconColorProps";
 
 const HeartfullIcon: FC<IconColorProps>= ({color} : IconColorProps) => {
     const heartColor = (color === "dark" ) ? "#1a243a" : "#fff";

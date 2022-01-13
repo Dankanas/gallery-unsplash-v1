@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import { IconColorProps } from '../../../types/IconColorProps';
+
 const HeartIcon : FC<IconColorProps> = ({color} : IconColorProps) => {
     const heartColor = (color === "dark" ) ? "#1a243a" : "#fff";
     return <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -12,8 +14,3 @@ const HeartIcon : FC<IconColorProps> = ({color} : IconColorProps) => {
 
 export default HeartIcon;
 
-export type IconColor = "light" | "dark"
-
-export interface IconColorProps{
-    color: IconColor
-}

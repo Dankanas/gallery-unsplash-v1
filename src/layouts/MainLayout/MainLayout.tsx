@@ -17,9 +17,9 @@ const MainLayout: FunctionComponent = ({ children }: MainLayoutProps) => {
   const classNameContent = classNames(`${className}_content`, classNamesObject());
   return (
     <div className={classNameMain}>
-      <ImageModalContainer />
+      <ImageModalContainer/>
       <div className={classNameBody}>
-        <AppTopbar></AppTopbar>
+        <AppTopbar/>
         <div className={classNameContent}>{children}</div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import ImageModalAbout from './components/ImageModalAbout';
 import ImageModalPicture from './components/ImageModalPicture';
 
 import './ImageModal.scss';
+import { ImageModalProps } from '../../types/ImageModalProps';
 
 const ImageModal: FunctionComponent<ImageModalProps> = ({
   src,
@@ -56,18 +57,6 @@ const ImageModal: FunctionComponent<ImageModalProps> = ({
   );
 };
 
-interface ImageModalProps {
-  src: string;
-  id: string;
-  author: string;
-  description: string;
-  likes: number;
-  downloads: number;
-  views: number;
-  cameraMakes: string;
-  cameraModule: string;
-  focalLength: string;
-  dimensions: string;
-}
+
 
 export default ImageModal;

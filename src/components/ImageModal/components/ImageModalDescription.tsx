@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { useSelector } from "react-redux";
 import classNames from "classnames";
 
 import { classNamesObject } from "../../../containers/ClassNamesObject";

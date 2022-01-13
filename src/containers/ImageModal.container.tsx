@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import ImageModal from '../components/ImageModal';
 import { ToggleImageModal } from '../store/action';
+import { clientId } from '../constants/keys';
 
 const ImageModalContainer: FunctionComponent = () => {
   const [src, setSrc] = useState('');
@@ -23,7 +24,7 @@ const ImageModalContainer: FunctionComponent = () => {
       `https://api.unsplash.com/photos/${location}`,
       {
         params: {
-          client_id: 'IpFv3wfhiTwFG5YhrM6R4Q0LGb3On_OOdCvFMREhyrk', // TODO: move to constants
+          client_id: clientId, 
         },
       }
     );

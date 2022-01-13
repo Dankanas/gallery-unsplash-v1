@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Grid from '../components/Grid/Grid';
 import { ApplicationState } from '../store/types';
+import { clientId } from '../constants/keys';
 
 const ImageSearchContainer : FC = () => {
     const searchBar = useSelector ((state: ApplicationState) => state.searchBar);
@@ -12,7 +13,7 @@ const ImageSearchContainer : FC = () => {
     const GetUnsplashSearch = async () => {
         const response = await axios.get('https://api.unsplash.com/search/photos', { params: {
             per_page: numberOfGridPhotos,
-            client_id: 'IpFv3wfhiTwFG5YhrM6R4Q0LGb3On_OOdCvFMREhyrk',
+            client_id: clientId,
             query: searchBar
         }})
         setData(response.data.results.map((x : ImageGridProps) => {return {src: x.urls.regular , id: x.id}}))
