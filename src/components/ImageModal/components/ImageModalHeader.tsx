@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
+import { isMobile } from "react-device-detect";
 
 import { ApplicationState } from "../../../store/types";
 import { ToggleFavoriteImage } from "../../../store/action";
@@ -45,10 +46,10 @@ const ImageModalHeader: FunctionComponent<ModalHeaderProps> = ({
         ) : (
           <div
             className={`${className}__notliked`}
-            onMouseEnter={() => {
+            onMouseEnter={isMobile ? null : () => { 
               setHover(true);
             }}
-            onMouseLeave={() => {
+            onMouseLeave={isMobile ? null : () =>  {
               setHover(false);
             }}
           >
