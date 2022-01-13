@@ -1,19 +1,17 @@
 import React, { FunctionComponent } from 'react';
-import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
-//import { ApplicationState } from '@/store/types';
-
 import './ImageModalPicture.scss';
+import { classNamesObject } from '../../../containers/ClassNamesObject';
 
 const ImageModalPicture: FunctionComponent<ModalPictureProps> = ({
   src,
 }: ModalPictureProps) => {
   const className = 'picture';
-  //const lightMode = useSelector((state: ApplicationState) => state.lightMode);
+  const classNameBox = classNames(`${className}__box`, classNamesObject())
   const urlCheck = src !== '';
   return (
-    <div className={`${className}__box`}>
+    <div className={classNameBox}>
       {urlCheck && <img src={src} className={`${className}__img`} />}
     </div>
   );

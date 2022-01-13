@@ -5,6 +5,7 @@ import classNames from 'classnames';
 //import { ApplicationState } from '@/store/types';
 
 import './ImageModalCamera.scss';
+import { classNamesObject } from '../../../containers/ClassNamesObject';
 
 const ImageModalCamera: FunctionComponent<ModalCameraProps> = ({
   cameraMakes,
@@ -12,16 +13,9 @@ const ImageModalCamera: FunctionComponent<ModalCameraProps> = ({
   focalLength,
   dimensions,
 }: ModalCameraProps) => {
-  //const lightMode = useSelector((state: ApplicationState) => state.lightMode);
   const className = 'camera';
-  //const classNameTitle = classNames(`${className}__title`, {
-   // lightMode: lightMode,
- // });
-  //const classNameContent = classNames(`${className}__content`, {
-//lightMode: lightMode,
-  //});
   const classNameTitle = `${className}__title`;
-  const classNameContent = `${className}__content`;
+  const classNameContent = classNames(`${className}__content`, classNamesObject());
   return (
     <div className={`${className}`}>
       <div className={`${className}__block`}>

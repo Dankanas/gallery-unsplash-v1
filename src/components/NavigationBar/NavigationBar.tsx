@@ -1,9 +1,12 @@
 import React, { FC } from "react";
-import {useLocation, useHistory} from 'react-router-dom';
+import { useLocation, useHistory } from "react-router-dom";
+import classNames from "classnames";
 
-import "./NavigationBar.scss";
 import Icon from "../Icon";
+import { classNamesObject } from "../../containers/ClassNamesObject";
+
 import { IconName } from "../../types/IconName";
+import "./NavigationBar.scss";
 
 const NavigationBar: FC<NavigationBarProps> = ({
   NavigationItems,
@@ -11,12 +14,20 @@ const NavigationBar: FC<NavigationBarProps> = ({
   const className = "navigation-bar";
   const location = useLocation();
   const history = useHistory();
-  console.log(location);
-  console.log(history);
   return (
     <div className={className}>
       {NavigationItems.map((item, index) => (
-        <div className={`${className}_box`} onClick={() => {history.push(item.route)}}>
+        <div
+          className={classNames(`${className}_box`, {
+            ...classNamesObject(),
+            "is-active": location.pathname === item.route,
+          })}
+          onClick={() => {
+            history.push(item.route);
+            item.action;
+          }}
+          key={`navigation-item-${index}`}
+        >
           <div className={`${className}_icon`}>
             <Icon name={item.name}></Icon>
           </div>
@@ -34,5 +45,6 @@ interface NavigationBarProps {
 
 interface NavigationItem {
   name: IconName;
-  route?: string;
+  route: string;
+  action?: string;
 }

@@ -12,4 +12,10 @@
   @include if-cinema {
     padding: 50px;
   }
+
+  &.light {
+    background-color: color('light-grey');
+  }
+
+
 }

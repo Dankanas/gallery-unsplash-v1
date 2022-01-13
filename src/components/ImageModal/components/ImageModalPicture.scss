@@ -1,10 +1,10 @@
 .picture {
   &__box {
-    background-color: color('dark');
+    background-color: color('dark-grey');
     height: 80%;
     width: 100%;
-    &.lightMode {
-      background-color: color('light');
+    &.light {
+      background-color: color('light-grey');
     }
     @include if-desktop {
       height: 100%;

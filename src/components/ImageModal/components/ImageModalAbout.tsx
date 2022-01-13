@@ -1,12 +1,11 @@
 import React, { FunctionComponent } from 'react';
-import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
 import ImageModalCamera from './ImageModalCamera';
 import ImageModalData from './ImageModalData';
 import ImageModalDescription from './ImageModalDescription';
 import ImageModalHeader from './ImageModalHeader';
-///import { ApplicationState } from '../../../store/initialState'
+import { classNamesObject } from '../../../containers/ClassNamesObject';
 
 import './ImageModalAbout.scss';
 
@@ -24,11 +23,10 @@ const ImageModalAbout: FunctionComponent<SingleModal> = ({
   src,
 }: SingleModal) => {
   const className = 'about';
-  //const lightMode = useSelector((state: ApplicationState) => state.lightMode);
+  const classNameAbout = classNames(className, classNamesObject());
 
   return (
-   // <div className={classNames(className, { lightMode: lightMode })}>
-    <div className={className}>
+    <div className={classNameAbout}>
       <div>
         <ImageModalHeader author={author} id={id} src={src} />
         <ImageModalDescription description={description} />

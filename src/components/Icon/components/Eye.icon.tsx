@@ -1,7 +1,9 @@
 import React , { FC } from 'react';
+import { IconColorProps } from './Heart.icon';
 
-const EyeIcon : FC = () => {
-    const style = ".a,.b,.d{fill:none;}.a{clip-rule:evenodd;}.b{fill-rule:evenodd;}.c{clip-path:url(#a);}.d{stroke:rgba(112,112,112,0.01);stroke-width:0px;}.e{fill:#fff;}"
+const EyeIcon : FC<IconColorProps> = ({ color }: IconColorProps) => {
+   const eyeColor = (color === "dark" ) ? "#1a243a" : "#fff";
+    const style = `.a,.b,.d{fill:none;}.a{clip-rule:evenodd;}.b{fill-rule:evenodd;}.c{clip-path:url(#a);}.d{stroke:rgba(112,112,112,0.01);stroke-width:0px;}.e{fill:${eyeColor};}`
     return (<svg xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"  viewBox="0 0 24 24">
     <defs>

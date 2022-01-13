@@ -1,9 +1,11 @@
 export interface ApplicationState {
   favoriteImagesArray: FavoriteImagesType[]
   themeSwitch: ThemeSwitch
+  searchBar: string;
+  isImageModalActive: boolean;
 }
 
-export type ThemeSwitch = 'green' | 'red' | 'blue' | 'light'
+export type ThemeSwitch = 'default' | 'red' | 'blue' | 'light' 
 
 export interface FavoriteImagesType {
   id: string,

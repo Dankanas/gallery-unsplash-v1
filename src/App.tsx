@@ -8,6 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 import routes from "./constants/routes";
 import store from "./store/store";
 import Favorites from "./views/Favorites";
+import Search from "./views/Search";
 
 const App: FC = () => {
   return (
@@ -20,6 +21,9 @@ const App: FC = () => {
             </Route>
             <Route path={routes.favorites} exact>
               <Favorites />
+            </Route>
+            <Route path={routes.search} >
+              <Search />
             </Route>
           </Switch>
         </MainLayout>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
 import ImageModal from '../components/ImageModal';
+import { ToggleImageModal } from '../store/action';
 
 const ImageModalContainer: FunctionComponent = () => {
   const [src, setSrc] = useState('');
@@ -17,6 +18,7 @@ const ImageModalContainer: FunctionComponent = () => {
   const [dimensions, setDimensions] = useState('');
 
   const getUnsplashData = async (location: string) => {
+    ToggleImageModal(true);
     const response = await axios.get(
       `https://api.unsplash.com/photos/${location}`,
       {
@@ -61,6 +63,7 @@ const ImageModalContainer: FunctionComponent = () => {
     }
   });
   if (location === '') {
+    ToggleImageModal(false);
     return <></>;
   }
   return (

@@ -1,7 +1,10 @@
 $color-dark: #151515;
 $color-light: #eee;
 $color-dark-grey: #242424;
+$color-dark-grey-2: #313131;
 $color-primary: #1da175;
+$color-blue: #549499;
+$color-dark-blue: #1a243a;
 $color-grey: #ADADAD;
 $color-light-grey: #dddddd;
 $color-transparent: rgba(0, 0, 0, 0);
@@ -10,7 +13,10 @@ $theme-colors: (
   'dark': $color-dark,
   'light': $color-light,
   'dark-grey': $color-dark-grey,
+  'dark-grey-2': $color-dark-grey-2,
   'primary': $color-primary,
+  'blue': $color-blue,
+  'dark-blue': $color-dark-blue,
   'grey': $color-grey,
   'light-grey': $color-light-grey,
   'transparent': $color-transparent

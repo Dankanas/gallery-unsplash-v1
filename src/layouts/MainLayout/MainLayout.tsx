@@ -1,24 +1,33 @@
-import React , { ReactNode , FunctionComponent } from 'react';
-import AppTopbar from '../../components/AppTopbar';
+import React, { ReactNode, FunctionComponent } from "react";
+import classNames from "classnames";
 
-import './MainLayout.scss';
-import ImageModalContainer from '../../containers/ImageModal.container';
+import AppTopbar from "../../components/AppTopbar";
+import ImageModalContainer from "../../containers/ImageModal.container";
+import { classNamesObject } from "../../containers/ClassNamesObject";
 
-const MainLayout: FunctionComponent = ({children} : MainLayoutProps) => {
-    const className : string = 'main-layout';
-    return (<div className ={className}>
-        <ImageModalContainer/> 
-        <div className = {`${className}_body`}>
+import "./MainLayout.scss";
+import { useSelector } from "react-redux";
+import { ApplicationState } from "../../store/types";
+
+const MainLayout: FunctionComponent = ({ children }: MainLayoutProps) => {
+  const className = "main-layout";
+  const isModalActive = useSelector((state: ApplicationState) => state.isImageModalActive);
+  const classNameMain = classNames(className, classNamesObject());
+  const classNameBody = classNames(`${className}_body`, {...classNamesObject(), 'is-modal-active': isModalActive});
+  const classNameContent = classNames(`${className}_content`, classNamesObject());
+  return (
+    <div className={classNameMain}>
+      <ImageModalContainer />
+      <div className={classNameBody}>
         <AppTopbar></AppTopbar>
-        <div className = {`${className}_content`}>{children}</div>
-        </div>
-        
-    </div>)
-}
+        <div className={classNameContent}>{children}</div>
+      </div>
+    </div>
+  );
+};
 
 interface MainLayoutProps {
-    children: React.ReactChildren;
+  children: React.ReactChildren;
 }
-
 
 export default MainLayout;

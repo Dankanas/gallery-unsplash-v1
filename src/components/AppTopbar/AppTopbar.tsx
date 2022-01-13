@@ -1,27 +1,64 @@
 import React, { FC, useState } from "react";
+import { useHistory } from "react-router-dom";
+import classNames from "classnames";
 
-import "./AppTopbar.scss";
 import TopbarLogo from "../TopbarLogo";
 import NavigationBar from "../NavigationBar/NavigationBar";
+import { SubmitSearchBar } from "../../store/action";
+import ThemeSwitch from "../ThemeSwitch";
+import { classNamesObject } from "../../containers/ClassNamesObject";
+
+import "./AppTopbar.scss";
 import routes from "../../constants/routes";
-import Home from "../../views/Home";
 
 const AppTopbar: FC = () => {
-  const [searchbar, setSearchbar] = useState("Search...");
   const className = "app-topbar";
+  const classNameTopbar = classNames(className, classNamesObject());
+  const [input, setInput] = useState("Search...");
+  const history = useHistory();
+  const handleSearch = () => {
+    if (input === "Search..." || input.length === 0) {
+      history.push(routes.home);
+    } else {
+      SubmitSearchBar(input);
+      setInput("Search...");
+    }
+  };
+  const handleKeyDown = (event: any) => {
+    if (event.key === "Enter" && input.length !== 0) {
+      SubmitSearchBar(input);
+      setInput("");
+      history.push(routes.search);
+    }
+  };
   return (
-    <div className={className}>
-      <TopbarLogo />
+    <div className={classNameTopbar}>
+      <div className={`${className}_logo`} id={"app-topbar-logo"}>
+        <TopbarLogo />
+      </div>
       <div className={`${className}_inner`}>
-        <NavigationBar NavigationItems={[{ name: "heart" ,route: routes.favorites }, { name: "image", route: routes.home }, { name: "search" ,route: routes.search }]}></NavigationBar>
+        <ThemeSwitch />
+        <NavigationBar
+          NavigationItems={[
+            { name: "heart", route: routes.favorites },
+            { name: "image", route: routes.home },
+          ]}
+        />
+        <div onClick={() => handleSearch()}>
+          <NavigationBar
+            NavigationItems={[{ name: "search", route: routes.search }]}
+          />
+        </div>
+      </div>
+      <div className={`${className}_search`}>
         <div className={`${className}_input`}>
           <input
             className={`${className}_input_text`}
             type="text"
-            value={searchbar}
-            onFocus={(e) => setSearchbar("")}
-            onBlur={(e) => setSearchbar("Search...")}
-            onChange={(e) => setSearchbar(e.target.value)}
+            value={input}
+            onFocus={(e) => setInput("")}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => handleKeyDown(e)}
           />
         </div>
       </div>

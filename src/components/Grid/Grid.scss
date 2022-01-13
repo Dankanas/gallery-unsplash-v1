@@ -1,12 +1,12 @@
 .grid {
     display: grid;
-    gap: 30px 30px;
+    gap: 20px 20px;
     grid-auto-flow: row;
     grid-auto-rows: 210px 70px 210px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 210px 70px 210px;
     height: 100%;
-    padding: 30px;
+    padding: 20px;
     width: 100%;
 
     &_item:nth-child(odd) {
@@ -16,6 +16,8 @@
 
     @include if-tablet {
         grid-template-columns: repeat(4, 1fr);
+        gap: 25px 25px;
+        padding: 25px;
 
         &_item:nth-child(8n + 6) {
             grid-row-end: span 2;
@@ -28,6 +30,8 @@
 
     @include if-desktop {
         grid-template-columns: repeat(6, 1fr);
+        gap: 30px 30px;
+        padding: 30px;
     
 
     &_item:nth-child(12n + 1) {

@@ -1,29 +1,43 @@
 .navigation-bar {
-    color: color('light');
+  color: color("light");
+  display: flex;
+  justify-content: end;
+  font-family: "Roboto", sans-serif;
+
+  &_box {
+    align-items: center;
     display: flex;
-    justify-content: end;
-    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    height: 100%;
+    width: 50px;  //75
+    border-radius: 5px;
 
-    &_box {
-        align-items: center;
-        border-left: solid 1px rgba(255, 255, 255, 0.5);
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        width: 75px;
-    }
-
-    &_box:hover {
-        background-color: color('primary');
-    }
-    
-    &_icon {
-        width: 30px;
-        height: 50px;
+    &.is-active {
+      transition-duration: 400ms;
+      background-color: color("primary");
+      &.blue {
+        background-color: color("blue");
+      }
+      &.light {
+        background-color: color("dark-blue");
+      }
     }
 
-    &_icon:active {
-        width: 27px;
+    &:hover {
+      transition-duration: 400ms;
+      background-color: color("primary");
+      cursor: pointer;
+      &.blue {
+        background-color: color("blue");
+      }
+      &.light {
+        background-color: color("dark-blue");
+      }
     }
+  }
+
+  &_icon {
+    width: 30px; //30
+    height: 50px; //50
+  }
 }
-

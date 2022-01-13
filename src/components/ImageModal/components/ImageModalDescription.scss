@@ -16,8 +16,8 @@
     color: color('light');
     font-size: 1.25rem;
     margin-top: spacing('xs');
-    &.lightMode {
-      color: color('dark');
+    &.light {
+      color: color('dark-blue');
     }
   }
 }

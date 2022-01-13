@@ -1,28 +1,23 @@
-import React, { FunctionComponent } from 'react';
-import { useSelector } from 'react-redux';
-import classNames from 'classnames';
+import React, { FunctionComponent } from "react";
+import { useSelector } from "react-redux";
+import classNames from "classnames";
 
-//import { ApplicationState } from '@/store/types';
+import { classNamesObject } from "../../../containers/ClassNamesObject";
 
-import './ImageModalDescription.scss';
+import "./ImageModalDescription.scss";
 
 const ImageModalDescription: FunctionComponent<ModalDescriptionProps> = ({
   description,
 }: ModalDescriptionProps) => {
-  const className = 'description';
-  //const lightMode = useSelector((state: ApplicationState) => state.lightMode);
+  const className = "description";
+  const classNameContent = classNames(
+    `${className}__content`,
+    classNamesObject()
+  );
   return (
     <div className={`${className}`}>
-      <div
-        className={`${className}__title`}
-      >
-        description
-      </div>
-      <div
-        className={`${className}__content`}
-      >
-        {description}
-      </div>
+      <div className={`${className}__title`}>description</div>
+      <div className={classNameContent}>{description}</div>
     </div>
   );
 };

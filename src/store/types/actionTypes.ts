@@ -1,12 +1,9 @@
 import { ToggleFavoriteImage } from "../action";
 import { FavoriteImagesType } from "./applicationState";
 
-import { ThemeSwitch } from "./applicationState";
-
-
 export interface ToggleTheme {
   type: ActionTypes.ToggleTheme;
-  payload: ThemeSwitch;
+  payload: void;
 }
 
 export interface ToggleFavoriteImage {
@@ -14,11 +11,23 @@ export interface ToggleFavoriteImage {
   payload: FavoriteImagesType;
 }
 
-export enum ActionTypes {
-  ToggleTheme = 'TOGGLE_THEME',
-  ToggleFavoriteImage = 'TOGGLE_FAVORITE_IMAGE'
+export interface SubmitSearchBar {
+  type: ActionTypes.SubmitSearchBar;
+  payload: string;
 }
 
-export type Action = ToggleTheme | ToggleFavoriteImage;
+export interface ToggleImageModal {
+  type: ActionTypes.ToggleImageModal;
+  payload: boolean;
+}
+
+export enum ActionTypes {
+  ToggleTheme = 'TOGGLE_THEME',
+  ToggleFavoriteImage = 'TOGGLE_FAVORITE_IMAGE',
+  SubmitSearchBar = 'SUBMIT_SEARCH_BAR',
+  ToggleImageModal = 'TOGGLE_IMAGE_MODAL'
+}
+
+export type Action = ToggleTheme | ToggleFavoriteImage | SubmitSearchBar | ToggleImageModal;
 
 

@@ -1,1 +1,1 @@
-export type IconName = 'image' | 'heart' | 'heart-full' | 'search' | 'eye' | 'download'
+export type IconName = 'image' | 'heart' | 'heart-full' | 'search' | 'eye' | 'download' | 'theme'
