@@ -3,17 +3,31 @@
   display: flex;
   justify-content: center;
   height: 50px;
-  width: 50px; //75
+  width: 50px;
   border-radius: 5px;
 
-  &:hover {
+  &:active {
     background-color: color("primary");
     cursor: pointer;
     &.blue {
       background-color: color("blue");
     }
     &.light {
-      background-color: color("dark-blue");
+      background-color: color("dark-blue");}
+
+  }
+
+  &:hover {
+    @include if-desktop {
+      background-color: color("primary");
+      cursor: pointer;
+      transition-duration: 400ms;
+      &.blue {
+        background-color: color("blue");
+      }
+      &.light {
+        background-color: color("dark-blue");
+      }
     }
   }
 
