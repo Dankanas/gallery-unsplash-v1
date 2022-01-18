@@ -10,7 +10,7 @@
   position: fixed;
   right: 0;
   width: 100%;
-  z-index: z-index("modal");
+  z-index: 100;
   @include if-desktop {
     padding-bottom: 0;
   }
