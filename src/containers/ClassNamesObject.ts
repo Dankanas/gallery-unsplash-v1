@@ -1,4 +1,3 @@
-import { ThemeSwitch } from "../store/types/applicationState";
 import { useSelector } from "react-redux";
 import { ApplicationState } from "../store/types";
 

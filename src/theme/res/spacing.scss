@@ -1,9 +1,0 @@
-$spacing-map: (
-  'xs' : 6px,
-  's': 10px,
-  'l': 50px,
-);
-
-@function spacing($_key) {
-  @return map-get($spacing-map, $_key);
-}
