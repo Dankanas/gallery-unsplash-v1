@@ -65,7 +65,19 @@ const ImageModalContainer: FunctionComponent = () => {
   });
   if (location === '') {
     ToggleImageModal(false);
-    return <></>;
+    return <ImageModal
+    src={""}
+    id={""}
+    author={""}
+    description={""}
+    likes={0}
+    views={0}
+    downloads={0}
+    cameraMakes={""}
+    cameraModule={""}
+    focalLength={""}
+    dimensions={""}
+  />;
   }
   return (
     <ImageModal

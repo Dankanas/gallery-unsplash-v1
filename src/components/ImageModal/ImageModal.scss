@@ -1,7 +1,7 @@
 .image-modal {
   align-items: center;
   background-color: rgba(20, 20, 20, 0.8);
-  display: flex;
+  display: none;
   height: 100vh;
   justify-content: center;
   left: 0;
@@ -11,6 +11,18 @@
   right: 0;
   width: 100%;
   z-index: 100;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+
+  &.is-modal-open {
+    opacity: 100%;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+  }
   @include if-desktop {
     padding-bottom: 0;
   }

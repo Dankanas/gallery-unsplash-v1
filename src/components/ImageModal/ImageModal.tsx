@@ -1,10 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import classNames from 'classnames';
 
 import ImageModalAbout from './components/ImageModalAbout';
 import ImageModalPicture from './components/ImageModalPicture';
 
 import './ImageModal.scss';
+import { ApplicationState } from '../../store/types';
 import { ImageModalProps } from '../../types/ImageModalProps';
 
 const ImageModal: FunctionComponent<ImageModalProps> = ({
@@ -23,12 +26,14 @@ const ImageModal: FunctionComponent<ImageModalProps> = ({
   const history = useHistory();
   const location = useLocation();
   const className = 'image-modal';
+  const isModalActive = useSelector((state: ApplicationState) => state.isImageModalActive);
+  const classNameModal = classNames(className, { "is-modal-open": isModalActive});
   const handleImageModalClosing = () => {
     history.push(location.pathname);
   };
   return (
     <div
-      className={className}
+      className={classNameModal}
       id={className}
       tabIndex={1}
       onClick={e => {

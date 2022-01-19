@@ -22,8 +22,13 @@
     flex-direction: column;
     height: 95vh;
     width: 90vw;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     &.is-modal-active {
       filter: blur(2px);
+      opacity: 0;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
     }
 
     @include if-tablet {
