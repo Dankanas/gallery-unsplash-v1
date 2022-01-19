@@ -14,6 +14,8 @@ const HeartfullIcon: FC<IconColorProps>= ({color} : IconColorProps) => {
       y="0px"
       viewBox="0 0 485.3 485.3"
       xmlSpace="preserve"
+      height="100%"
+      width="100%"
     >
       <g>
         <g>
