@@ -23,9 +23,6 @@
     transition-timing-function: ease-in-out;
     display: flex;
   }
-  @include if-desktop {
-    padding-bottom: 2vh;
-  }
 
   &__main {
     display: block;
