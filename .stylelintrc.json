@@ -22,7 +22,8 @@
     "color-function-notation": null,
     "alpha-value-notation": null,
     "font-family-name-quotes": null,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "value-no-vendor-prefix": null
 
 
   }
