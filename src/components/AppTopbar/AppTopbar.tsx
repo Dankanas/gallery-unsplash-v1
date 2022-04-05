@@ -50,7 +50,7 @@ const AppTopbar: FC = () => {
           />
         </div>
       </div>
-      <div className={`${className}_search`}>
+      {/* <div className={`${className}_search`}>
         <div className={`${className}_input`}>
           <input
             className={`${className}_input_text`}
@@ -61,7 +61,7 @@ const AppTopbar: FC = () => {
             onKeyDown={(e) => handleKeyDown(e)}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

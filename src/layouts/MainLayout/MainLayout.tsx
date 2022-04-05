@@ -21,6 +21,7 @@ const MainLayout: FunctionComponent = ({ children }: MainLayoutProps) => {
       <div className={classNameBody}>
         <AppTopbar/>
         <div className={classNameContent}>{children}</div>
+        <AppTopbar/>
       </div>
     </div>
   );
