@@ -7,7 +7,7 @@
     padding: 10px 18px 20px;
   
     &.light {
-        background-color: rgba(200, 200, 200, 0.8);
+        background-color: rgba(180, 180, 180, 0.8);
     }
 
     @include if-tablet {
