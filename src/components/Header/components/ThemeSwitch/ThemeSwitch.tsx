@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import classNames from "classnames";
 
-import Icon from "../Icon";
-import { ToggleTheme } from "../../store/action";
-import { classNamesObject } from "../../containers/ClassNamesObject";
+import Icon from "../../../Icon";
+import { ToggleTheme } from "../../../../store/action";
+import { classNamesObject } from "../../../../containers/ClassNamesObject";
 
 import "./ThemeSwitch.scss";
 

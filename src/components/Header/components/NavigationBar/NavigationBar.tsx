@@ -2,11 +2,11 @@ import React, { FC } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import classNames from "classnames";
 
-import Icon from "../Icon";
-import { classNamesObject } from "../../containers/ClassNamesObject";
+import Icon from "../../../Icon";
+import { classNamesObject } from "../../../../containers/ClassNamesObject";
 
 import "./NavigationBar.scss";
-import { NavigationBarProps } from "../../types/NavigationBarProps";
+import { NavigationBarProps } from "../../../../types/NavigationBarProps";
 
 const NavigationBar: FC<NavigationBarProps> = ({
   NavigationItems,

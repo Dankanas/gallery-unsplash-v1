@@ -1,0 +1,40 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 18px;
+
+  &.light {
+    background-color: rgba(200, 200, 200, 0.8);
+  }
+
+  &_logo {
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &_navbar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: end;
+    @include if-tablet {
+      justify-content: center;
+    }
+  }
+
+  &_searchbar {
+    display: none;
+    @include if-tablet {
+      flex: 1;
+      display: flex;
+      justify-content: end;
+      padding-left: 40px;
+      align-items: center;
+    }
+  }
+}
